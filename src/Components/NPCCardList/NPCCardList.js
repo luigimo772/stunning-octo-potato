@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 
 const NPCCardList = (props) => (
     <Container>
-        {props.npcData.map(npc => <NPCCard key={npc.id} {...npc}/>)}
+        {props.allNPCs.map(npc => <NPCCard key={npc.id} {...npc}/>)}
     </Container>
 );
 
