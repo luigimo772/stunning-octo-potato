@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React from 'react';
-// import Button from '@material-ui/core/Button';
 
 class Form extends React.Component {
     state = {
@@ -8,6 +7,7 @@ class Form extends React.Component {
     };
     handleSubmit = async (event) => {
         event.preventDefault();
+        // todo: move call to separate module
         const res = await axios.get(`https://eldenring.fanapis.com/api/npcs?name=${this.state.npcName}`);
         this.props.onSubmit(res.data.data);
         
