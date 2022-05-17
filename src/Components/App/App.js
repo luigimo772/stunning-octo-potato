@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import NPCCardList from '../NPCCardList/NPCCardList';
@@ -11,8 +11,8 @@ function App() {
     setNPCs([...npcs, newNPCData[0]]);
   }; 
   return (
-    <Container className="App">
-      <Typography variant="h3">
+    <Container align='center'>
+      <Typography variant="h3" gutterBottom>
         Elden Ring NPCs
       </Typography>
       <Form onSubmit={addNewNPC}/>

@@ -7,11 +7,21 @@ class NPCCard extends React.Component {
     render() {
         const npcData = this.props;
         return (
-           <Card>
-               <CardContent>
+           <Card maxWidth='xs' variant='outlined'>
+               <CardContent align='left'>
                     <img src={npcData.image} alt='what the npc looks like'/>
-                    <Typography variant='h5'>{npcData.name}</Typography>
-                    <Typography variant='h5'>{npcData.location}</Typography>
+                    <Typography color='textSecondary'>
+                        Name 
+                    </Typography>
+                    <Typography variant='h6'>{npcData.name}</Typography>
+                    <Typography color='textSecondary'>
+                        Location 
+                    </Typography>
+                    <Typography variant='h6'>{npcData.location}</Typography>
+                    <Typography color='textSecondary'>
+                        Quote 
+                    </Typography>
+                    <Typography variant='h6'>{npcData.quote}</Typography>
                </CardContent>
            </Card> 
         );
