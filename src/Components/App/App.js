@@ -8,7 +8,7 @@ import { useState } from 'react';
 function App() {
   const [npcs, setNPCs] = useState([]);
   const addNewNPC = (newNPCData) => {
-    setNPCs([...npcs, newNPCData[0]]);
+    setNPCs([newNPCData[0], ...npcs]);
   }; 
   return (
     <Container align='center'>
@@ -16,6 +16,7 @@ function App() {
         Elden Ring NPCs
       </Typography>
       <Form onSubmit={addNewNPC}/>
+      <br />
       <NPCCardList allNPCs={npcs}/>
     </Container>
   );

@@ -7,21 +7,52 @@ class NPCCard extends React.Component {
     render() {
         const npcData = this.props;
         return (
-           <Card maxWidth='xs' variant='outlined'>
-               <CardContent align='left'>
-                    <img src={npcData.image} alt='what the npc looks like'/>
-                    <Typography color='textSecondary'>
+           <Card 
+                maxWidth='xs' 
+                variant='outlined' 
+                style={{backgroundColor: "white"}}
+            >
+               <CardContent>
+                    <img 
+                        src={npcData.image} 
+                        alt='what the npc looks like'
+                    />
+                    <Typography 
+                        align='left' 
+                        color='textSecondary'
+                    >
                         Name 
                     </Typography>
-                    <Typography variant='h6'>{npcData.name}</Typography>
-                    <Typography color='textSecondary'>
+                    <Typography 
+                        align='left' 
+                        variant='h6'
+                    >
+                        {npcData.name}
+                    </Typography>
+                    <Typography 
+                        align='left' 
+                        color='textSecondary'
+                    >
                         Location 
                     </Typography>
-                    <Typography variant='h6'>{npcData.location}</Typography>
-                    <Typography color='textSecondary'>
+                    <Typography
+                        align='left' 
+                        variant='h6'
+                    >
+                        {npcData.location}
+                    </Typography>
+                    <Typography
+                        align='left' 
+                        color='textSecondary'
+                    >
                         Quote 
                     </Typography>
-                    <Typography variant='h6'>{npcData.quote}</Typography>
+                    <Typography
+                        align='left' 
+                        variant='h6'
+                    >
+                        {npcData.quote}
+                    </Typography>
                </CardContent>
            </Card> 
         );
