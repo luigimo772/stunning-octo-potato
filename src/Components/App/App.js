@@ -7,8 +7,8 @@ import { useState } from 'react';
 
 function App() {
   const [npcs, setNPCs] = useState([]);
-  const addNewNPC = (newNPCData) => {
-    setNPCs([newNPCData[0], ...npcs]);
+  const addNewNPC = (npc) => {
+    setNPCs([npc, ...npcs]);
   }; 
   return (
     <Container align='center'>

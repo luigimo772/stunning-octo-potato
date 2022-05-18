@@ -9,8 +9,10 @@ class Form extends React.Component {
         event.preventDefault();
         // todo: move call to separate module
         const res = await axios.get(`https://eldenring.fanapis.com/api/npcs?name=${this.state.npcName}`);
-        this.props.onSubmit(res.data.data);
-        
+        if (res.data.data[0] !== undefined) {
+            this.props.onSubmit(res.data.data[0]);
+        };
+
         // clear npc name
         this.setState({
             npcName: ''
